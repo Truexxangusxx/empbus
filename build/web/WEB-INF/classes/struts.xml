@@ -1,0 +1,1146 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <include file="example.xml"/>
+    <!-- Configuration for the default package. -->
+    <package name="Controller" namespace="/" extends="struts-default,json-default">
+        <action name="LoadUsuario" class="Controlador.UsuarioController" method="Load">
+            <result>/Vistas/Usuario/index.jsp</result>
+        </action>
+        <action name="GrabarUsuario" class="Controlador.UsuarioController" method="GrabarUsuario">
+            <result type="json"/>
+        </action>
+        <action name="EditarUsuario" class="Controlador.UsuarioController" method="EditarUsuario">
+            <result type="json"/>
+        </action>
+        <action name="ObtenerUsuario" class="Controlador.UsuarioController" method="ObtenerUsuario">
+            <result type="json"/>
+        </action>
+        <action name="EliminarUsuario" class="Controlador.UsuarioController" method="EliminarUsuario">
+            <result type="json"/>
+        </action>
+        <action name="ValidarUsuario" class="Controlador.UsuarioController" method="ValidarUsuario">
+            <result type="json"/>
+        </action>
+        <action name="BuscarUsuario" class="Controlador.UsuarioController" method="BuscarUsuario">
+            <result>/Vistas/Usuario/BuscarUsuario.jsp</result>
+        </action>
+        <action name="SalirUsuario" class="Controlador.UsuarioController" method="SalirUsuario">
+            <result>/Vistas/Home/index.jsp</result>
+        </action>        
+        <action name="ConfirmarPermiso" class="Controlador.PermisoController" method="Confirmar">
+            <result type="json"/>
+        </action>
+        <action name="LoadPermiso" class="Controlador.PermisoController" method="Load">
+            <result name="Autorizado">/Vistas/Usuario/Permiso.jsp</result>
+            <result name="NoAutorizado">/Vistas/Home/index.jsp</result>
+        </action>
+        <action name="AgregarPermiso" class="Controlador.PermisoController" method="AgregarPermiso">
+            <result>/Vistas/Usuario/ListaPermiso.jsp</result>
+        </action>
+        <action name="RemoverPermiso" class="Controlador.PermisoController" method="RemoverPermiso">
+            <result>/Vistas/Usuario/ListaPermiso.jsp</result>
+        </action>
+        <action name="GrabarPermiso" class="Controlador.PermisoController" method="GrabarPermiso">
+            <result type="json"/>
+        </action>
+        <action name="BuscarPermiso" class="Controlador.PermisoController" method="BuscarPermiso">
+            <result>/Vistas/Usuario/ListaPermiso.jsp</result>
+        </action>
+        <action name="BuscarOpcion" class="Controlador.OpcionController" method="BuscarOpcion">
+            <result>/Vistas/Usuario/ComboOpcion.jsp</result>
+        </action>
+        
+        <action name="GrabarTipoProducto" class="Controlador.TipoProductoController" method="GrabarTipoProducto">
+            <result type="json"/>
+        </action>
+        <action name="LoadTipoProducto" class="Controlador.TipoProductoController" method="Load">
+            <result name="Autorizado">/Vistas/Produccion/TipoProducto.jsp</result>
+            <result name="NoAutorizado">/Vistas/Home/index.jsp</result>
+        </action>
+        <action name="BuscarTipoProducto" class="Controlador.TipoProductoController" method="BuscarTipoProducto">
+            <result>/Vistas/Produccion/Auxiliar/ListaTipoProducto.jsp</result>
+        </action>
+        <action name="EliminarTipoProducto" class="Controlador.TipoProductoController" method="EliminarTipoProducto">
+            <result type="json"/>
+        </action>
+        <action name="EditarTipoProducto" class="Controlador.TipoProductoController" method="EditarTipoProducto">
+            <result type="json"/>
+        </action>
+        <!--begin producto-->
+        <action name="LoadProducto" class="Controlador.ProductoController" method="Load">
+            <result name="Autorizado">/Vistas/Produccion/Producto.jsp</result>
+            <result name="NoAutorizado">/Vistas/Home/index.jsp</result>
+        </action>
+        <action name="GrabarProducto" class="Controlador.ProductoController" method="GrabarProducto">
+            <result type="json"/>
+        </action>
+        <action name="BuscarProducto" class="Controlador.ProductoController" method="BuscarProducto">
+            <result>/Vistas/Produccion/Auxiliar/ListaProducto.jsp</result>
+        </action>
+        <action name="BuscarProductoJson" class="Controlador.ProductoController" method="BuscarProducto">
+            <result type="json"/>
+        </action>
+        <action name="EliminarProducto" class="Controlador.ProductoController" method="EliminarProducto">
+            <result type="json"/>
+        </action>
+        <action name="EditarProducto" class="Controlador.ProductoController" method="EditarProducto">
+            <result type="json"/>
+        </action>
+        <action name="ObtenerProducto" class="Controlador.ProductoController" method="ObtenerProducto">
+            <result type="json"/>
+        </action>
+        <!--end producto-->
+        <!--begin ClienteProveedor-->
+        <action name="LoadClienteProveedor" class="Controlador.ClienteProveedorController" method="Load">
+            <result name="Autorizado">/Vistas/Logistica/ClienteProveedor.jsp</result>
+            <result name="NoAutorizado">/Vistas/Home/index.jsp</result>
+        </action>
+        <action name="GrabarClienteProveedor" class="Controlador.ClienteProveedorController" method="GrabarClienteProveedor">
+            <result type="json"/>
+        </action>
+        <action name="EditarClienteProveedor" class="Controlador.ClienteProveedorController" method="EditarClienteProveedor">
+            <result type="json"/>
+        </action>
+        <action name="ObtenerClienteProveedor" class="Controlador.ClienteProveedorController" method="ObtenerClienteProveedor">
+            <result type="json"/>
+        </action>
+        <action name="EliminarClienteProveedor" class="Controlador.ClienteProveedorController" method="EliminarClienteProveedor">
+            <result type="json"/>
+        </action>
+        <action name="BuscarClienteProveedor" class="Controlador.ClienteProveedorController" method="BuscarClienteProveedor">
+            <result>/Vistas/Logistica/Auxiliar/ListaClienteProveedor.jsp</result>
+        </action>
+        <!--end ClienteProveedor-->
+        <!--begin Cotizacion-->
+        <action name="LoadCotizacion" class="Controlador.CotizacionController" method="Load">
+            <result name="Autorizado">/Vistas/Ventas/Cotizacion.jsp</result>
+            <result name="NoAutorizado">/Vistas/Home/index.jsp</result>
+        </action>
+        <action name="AgregarCotizacionProducto" class="Controlador.CotizacionController" method="AgregarCotizacionProducto">
+            <result>/Vistas/Ventas/Auxiliar/ListaCotizacionProducto.jsp</result>
+        </action>
+        <action name="RemoverCotizacionProducto" class="Controlador.CotizacionController" method="RemoverCotizacionProducto">
+            <result>/Vistas/Ventas/Auxiliar/ListaCotizacionProducto.jsp</result>
+        </action>
+        <action name="GrabarCotizacion" class="Controlador.CotizacionController" method="GrabarCotizacion">
+            <result type="json"/>
+        </action>
+        <action name="CotizacionBuscar" class="Controlador.CotizacionController" method="CotizacionBuscar">
+            <result name="Autorizado">/Vistas/Ventas/CotizacionBuscar.jsp</result>
+            <result name="NoAutorizado">/Vistas/Home/index.jsp</result>
+        </action>
+        <action name="BuscarCotizacion" class="Controlador.CotizacionController" method="BuscarCotizacion">
+            <result>/Vistas/Ventas/Auxiliar/ListaCotizacion.jsp</result>
+        </action>
+        <action name="ImprimirCotizacion" class="Controlador.CotizacionController" method="ImprimirCotizacion">
+            <result type="stream">
+                <param name="contentType">application/pdf</param>
+                <param name="inputName">reportepdf</param>
+                <param name="bufferSize">1024</param>
+            </result>
+        </action>
+        <action name="EliminarCotizacion" class="Controlador.CotizacionController" method="EliminarCotizacion">
+            <result type="json"/>
+        </action>
+        <action name="BuscarClienteProveedorCotizacion" class="Controlador.ClienteProveedorController" method="BuscarClienteProveedor">
+            <result>/Vistas/Ventas/Auxiliar/ListaClienteProveedor.jsp</result>
+        </action>
+        <action name="EnviarListaCotizacionCaracteristicas" class="Controlador.CotizacionController" method="EnviarListaCotizacionCaracteristicas">
+            <result type="json"/>
+        </action>
+        <action name="AprobarCotizacion" class="Controlador.CotizacionController" method="AprobarCotizacion">
+            <result type="json"/>
+        </action>
+        <action name="ObtenerCotizacion" class="Controlador.CotizacionController" method="ObtenerCotizacion">
+            <result type="json"/>
+        </action>
+        <!--end Cotizacion-->
+        <!--begin Familia-->
+        <action name="GrabarFamilia" class="Controlador.FamiliaController" method="GrabarFamilia">
+            <result type="json"/>
+        </action>
+        <action name="EditarFamilia" class="Controlador.FamiliaController" method="EditarFamilia">
+            <result type="json"/>
+        </action>
+        <action name="ObtenerFamilia" class="Controlador.FamiliaController" method="ObtenerFamilia">
+            <result type="json"/>
+        </action>
+        <action name="EliminarFamilia" class="Controlador.FamiliaController" method="EliminarFamilia">
+            <result type="json"/>
+        </action>
+        <action name="LoadFamilia" class="Controlador.FamiliaController" method="Load">
+            <result name="Autorizado">/Vistas/Produccion/Familia.jsp</result>
+            <result name="NoAutorizado">/Vistas/Home/index.jsp</result>
+        </action>
+        <action name="BuscarFamilia" class="Controlador.FamiliaController" method="BuscarFamilia">
+            <result>/Vistas/Produccion/Auxiliar/ListaFamilia.jsp</result>
+        </action>
+        <!--end Familia-->
+        <!--begin ListaPrecio-->
+        <action name="LoadListaPrecio" class="Controlador.ListaPrecioController" method="Load">
+            <result name="Autorizado">/Vistas/Ventas/ListaPrecio.jsp</result>
+            <result name="NoAutorizado">/Vistas/Home/index.jsp</result>
+        </action>
+        <action name="GrabarListaPrecio" class="Controlador.ListaPrecioController" method="GrabarListaPrecio">
+            <result type="json"/>
+        </action>
+        <action name="EditarListaPrecio" class="Controlador.ListaPrecioController" method="EditarListaPrecio">
+            <result type="json"/>
+        </action>
+        <action name="ObtenerListaPrecio" class="Controlador.ListaPrecioController" method="ObtenerListaPrecio">
+            <result type="json"/>
+        </action>
+        <action name="EliminarListaPrecio" class="Controlador.ListaPrecioController" method="EliminarListaPrecio">
+            <result type="json"/>
+        </action>
+        <action name="BuscarListaPrecio" class="Controlador.ListaPrecioController" method="BuscarListaPrecio">
+            <result>/Vistas/Ventas/Auxiliar/ListaListaPrecio.jsp</result>
+        </action>
+        <!--end ListaPrecio-->
+        
+        <!--begin Sucursal-->
+        <action name="LoadSucursal" class="Controlador.SucursalController" method="Load">
+            <result name="Autorizado">/Vistas/Logistica/Sucursal.jsp</result>
+            <result name="NoAutorizado">/Vistas/Home/index.jsp</result>
+        </action>
+        <action name="GrabarSucursal" class="Controlador.SucursalController" method="GrabarSucursal">
+            <result type="json"/>
+        </action>
+        <action name="EditarSucursal" class="Controlador.SucursalController" method="EditarSucursal">
+            <result type="json"/>
+        </action>
+        <action name="ObtenerSucursal" class="Controlador.SucursalController" method="ObtenerSucursal">
+            <result type="json"/>
+        </action>
+        <action name="EliminarSucursal" class="Controlador.SucursalController" method="EliminarSucursal">
+            <result type="json"/>
+        </action>
+        <action name="BuscarSucursal" class="Controlador.SucursalController" method="BuscarSucursal">
+            <result>/Vistas/Logistica/Auxiliar/ListaSucursal.jsp</result>
+        </action>
+        <!--end Sucursal-->
+        <!--begin Almacen-->
+        <action name="LoadAlmacen" class="Controlador.AlmacenController" method="Load">
+            <result name="Autorizado">/Vistas/Logistica/Almacen.jsp</result>
+            <result name="NoAutorizado">/Vistas/Home/index.jsp</result>
+        </action>
+        <action name="GrabarAlmacen" class="Controlador.AlmacenController" method="GrabarAlmacen">
+            <result type="json"/>
+        </action>
+        <action name="EditarAlmacen" class="Controlador.AlmacenController" method="EditarAlmacen">
+            <result type="json"/>
+        </action>
+        <action name="ObtenerAlmacen" class="Controlador.AlmacenController" method="ObtenerAlmacen">
+            <result type="json"/>
+        </action>
+        <action name="EliminarAlmacen" class="Controlador.AlmacenController" method="EliminarAlmacen">
+            <result type="json"/>
+        </action>
+        <action name="BuscarAlmacen" class="Controlador.AlmacenController" method="BuscarAlmacen">
+            <result>/Vistas/Logistica/Auxiliar/ListaAlmacen.jsp</result>
+        </action>
+        <!--end Almacen-->
+        
+        <!--begin OrdenCompra-->
+        <action name="LoadOrdenCompra" class="Controlador.OrdenCompraController" method="Load">
+            <result name="Autorizado">/Vistas/Logistica/OrdenCompra.jsp</result>
+            <result name="NoAutorizado">/Vistas/Home/index.jsp</result>
+        </action>
+        <action name="GrabarOrdenCompra" class="Controlador.OrdenCompraController" method="GrabarOrdenCompra">
+            <result type="json"/>
+        </action>
+        <action name="EditarOrdenCompra" class="Controlador.OrdenCompraController" method="EditarOrdenCompra">
+            <result type="json"/>
+        </action>
+        <action name="ObtenerOrdenCompra" class="Controlador.OrdenCompraController" method="ObtenerOrdenCompra">
+            <result type="json"/>
+        </action>
+        <action name="EliminarOrdenCompra" class="Controlador.OrdenCompraController" method="EliminarOrdenCompra">
+            <result type="json"/>
+        </action>
+        <action name="BuscarOrdenCompra" class="Controlador.OrdenCompraController" method="BuscarOrdenCompra">
+            <result>/Vistas/Logistica/Auxiliar/ListaOrdenCompra.jsp</result>
+        </action>
+        <action name="AgregarOrdenCompraProducto" class="Controlador.OrdenCompraController" method="AgregarOrdenCompraProducto">
+            <result>/Vistas/Logistica/Auxiliar/ListaOrdenCompraProducto.jsp</result>
+        </action>
+        <action name="QuitarOrdenCompraProducto" class="Controlador.OrdenCompraController" method="QuitarOrdenCompraProducto">
+            <result>/Vistas/Logistica/Auxiliar/ListaOrdenCompraProducto.jsp</result>
+        </action>
+        <action name="AprobarOrdenCompra" class="Controlador.OrdenCompraController" method="AprobarOrdenCompra">
+            <result type="json"/>
+        </action>        
+        <action name="BuscarOrdenCompra" class="Controlador.OrdenCompraController" method="BuscarOrdenCompra">
+            <result>/Vistas/Logistica/Auxiliar/ListaOrdenCompra.jsp</result>
+        </action>        
+        <!--end OrdenCompra-->
+        
+        <!--begin Moneda-->
+        <action name="BuscarMoneda" class="Controlador.MonedaController" method="BuscarMoneda">
+            <result>/Vistas/Contabilidad/Auxiliar/ListaMoneda.jsp</result>
+        </action>
+        <!--end Moneda-->
+                
+        <!--begin TipoCambio-->
+        <action name="ObtenerTipoCambio" class="Controlador.TipoCambioController" method="ObtenerTipoCambio">
+            <result type="json"/>
+        </action>
+        <action name="OtenerTipoCambioPorFecha" class="Controlador.TipoCambioController" method="OtenerTipoCambioPorFecha">
+            <result type="json"/>
+        </action>
+        <!--end TipoCambio-->
+        <!--begin OrdenProduccion-->
+        <action name="LoadOrdenProduccion" class="Controlador.OrdenProduccionController" method="Load">
+            <result name="Autorizado">/Vistas/Produccion/OrdenProduccion.jsp</result>
+            <result name="NoAutorizado">/Vistas/Home/index.jsp</result>
+        </action>
+        <action name="GrabarOrdenProduccion" class="Controlador.OrdenProduccionController" method="GrabarOrdenProduccion">
+            <result type="json"/>
+        </action>
+        <action name="EditarOrdenProduccion" class="Controlador.OrdenProduccionController" method="EditarOrdenProduccion">
+            <result type="json"/>
+        </action>
+        <action name="ObtenerOrdenProduccion" class="Controlador.OrdenProduccionController" method="ObtenerOrdenProduccion">
+            <result type="json"/>
+        </action>
+        <action name="EliminarOrdenProduccion" class="Controlador.OrdenProduccionController" method="EliminarOrdenProduccion">
+            <result type="json"/>
+        </action>
+        <action name="BuscarOrdenProduccion" class="Controlador.OrdenProduccionController" method="BuscarOrdenProduccion">
+            <result>/Vistas/Produccion/Auxiliar/ListaOrdenProduccion.jsp</result>
+        </action>
+        <action name="BuscarOrdenProduccionJson" class="Controlador.OrdenProduccionController" method="BuscarOrdenProduccion">
+            <result type="json"/>
+        </action>
+        <action name="BuscarEstandarOP" class="Controlador.OrdenProduccionController" method="BuscarEstandar">
+            <result type="json"/>
+        </action>
+        <action name="GenerarPedido" class="Controlador.OrdenProduccionController" method="GenerarPedido">
+            <result type="json"/>
+        </action>
+        <!--end OrdenProduccion-->
+        
+        <!--begin OrdenServicio-->
+        <action name="LoadOrdenServicio" class="Controlador.OrdenServicioController" method="Load">
+            <result name="Autorizado">/Vistas/Logistica/OrdenServicio.jsp</result>
+            <result name="NoAutorizado">/Vistas/Home/index.jsp</result>
+        </action>
+        <action name="GrabarOrdenServicio" class="Controlador.OrdenServicioController" method="GrabarOrdenServicio">
+            <result type="json"/>
+        </action>
+        <action name="EditarOrdenServicio" class="Controlador.OrdenServicioController" method="EditarOrdenServicio">
+            <result type="json"/>
+        </action>
+        <action name="ObtenerOrdenServicio" class="Controlador.OrdenServicioController" method="ObtenerOrdenServicio">
+            <result type="json"/>
+        </action>
+        <action name="EliminarOrdenServicio" class="Controlador.OrdenServicioController" method="EliminarOrdenServicio">
+            <result type="json"/>
+        </action>
+        <action name="AgregarOrdenServicioProducto" class="Controlador.OrdenServicioController" method="AgregarOrdenServicioProducto">
+            <result>/Vistas/Logistica/Auxiliar/ListaOrdenServicioProducto.jsp</result>
+        </action>
+        <action name="QuitarOrdenServicioProducto" class="Controlador.OrdenServicioController" method="QuitarOrdenServicioProducto">
+            <result>/Vistas/Logistica/Auxiliar/ListaOrdenServicioProducto.jsp</result>
+        </action>
+        <action name="BuscarOrdenServicio" class="Controlador.OrdenServicioController" method="BuscarOrdenServicio">
+            <result>/Vistas/Logistica/Auxiliar/ListaOrdenServicio.jsp</result>
+        </action>
+        <!--end OrdenServicio-->
+        
+        <!--begin CentroCosto-->
+        <action name="LoadCentroCosto" class="Controlador.CentroCostoController" method="Load">
+            <result name="Autorizado">/Vistas/Costos/CentroCosto.jsp</result>
+            <result name="NoAutorizado">/Vistas/Home/index.jsp</result>
+        </action>        
+        <action name="GrabarCentroCosto" class="Controlador.CentroCostoController" method="GrabarCentroCosto">
+            <result type="json"/>
+        </action>
+        <action name="EditarCentroCosto" class="Controlador.CentroCostoController" method="EditarCentroCosto">
+            <result type="json"/>
+        </action>
+        <action name="ObtenerCentroCosto" class="Controlador.CentroCostoController" method="ObtenerCentroCosto">
+            <result type="json"/>
+        </action>
+        <action name="EliminarCentroCosto" class="Controlador.CentroCostoController" method="EliminarCentroCosto">
+            <result type="json"/>
+        </action>
+        <action name="BuscarCentroCosto" class="Controlador.CentroCostoController" method="BuscarCentroCosto">
+            <result>/Vistas/Costos/Auxiliar/ListaCentroCosto.jsp</result>
+        </action>
+        <action name="BuscarCentroCostoJson" class="Controlador.CentroCostoController" method="BuscarCentroCosto">
+            <result type="json"/>
+        </action>
+        <!--end CentroCosto-->
+        
+        <!--begin TipoMovimiento-->
+        <action name="LoadTipoMovimiento" class="Controlador.TipoMovimientoController" method="Load">
+            <result name="Autorizado">/Vistas/Almacen/TipoMovimiento.jsp</result>
+            <result name="NoAutorizado">/Vistas/Home/index.jsp</result>
+        </action>        
+        <action name="GrabarTipoMovimiento" class="Controlador.TipoMovimientoController" method="GrabarTipoMovimiento">
+            <result type="json"/>
+        </action>
+        <action name="EditarTipoMovimiento" class="Controlador.TipoMovimientoController" method="EditarTipoMovimiento">
+            <result type="json"/>
+        </action>
+        <action name="ObtenerTipoMovimiento" class="Controlador.TipoMovimientoController" method="ObtenerTipoMovimiento">
+            <result type="json"/>
+        </action>
+        <action name="EliminarTipoMovimiento" class="Controlador.TipoMovimientoController" method="EliminarTipoMovimiento">
+            <result type="json"/>
+        </action>
+        <action name="BuscarTipoMovimiento" class="Controlador.TipoMovimientoController" method="BuscarTipoMovimiento">
+            <result>/Vistas/Almacen/Auxiliar/ListaTipoMovimiento.jsp</result>
+        </action>
+        <!--end TipoMovimiento-->
+        
+        <!--begin Ingreso-->
+        <action name="LoadIngreso" class="Controlador.IngresoController" method="Load">
+            <result name="Autorizado">/Vistas/Almacen/Ingreso.jsp</result>
+            <result name="NoAutorizado">/Vistas/Home/index.jsp</result>
+        </action>        
+        <action name="GrabarIngreso" class="Controlador.IngresoController" method="GrabarIngreso">
+            <result type="json"/>
+        </action>
+        <action name="EditarIngreso" class="Controlador.IngresoController" method="EditarIngreso">
+            <result type="json"/>
+        </action>
+        <action name="ObtenerIngreso" class="Controlador.IngresoController" method="ObtenerIngreso">
+            <result type="json"/>
+        </action>
+        <action name="EliminarIngreso" class="Controlador.IngresoController" method="EliminarIngreso">
+            <result type="json"/>
+        </action>
+        <action name="BuscarIngreso" class="Controlador.IngresoController" method="BuscarIngreso">
+            <result>/Vistas/Almacen/Auxiliar/ListaIngreso.jsp</result>
+        </action>
+        <action name="BuscarIngresoPorOC" class="Controlador.IngresoController" method="BuscarIngresoPorOC">
+            <result>/Vistas/Almacen/Auxiliar/ListaIngreso.jsp</result>
+        </action>
+        <action name="AgregarIngresoProducto" class="Controlador.IngresoController" method="AgregarIngresoProducto">
+            <result>/Vistas/Almacen/Auxiliar/ListaIngresoProducto.jsp</result>
+        </action>        
+        <action name="QuitarIngresoProducto" class="Controlador.IngresoController" method="QuitarIngresoProducto">
+            <result>/Vistas/Almacen/Auxiliar/ListaIngresoProducto.jsp</result>
+        </action>
+        <action name="ObtenerOrdenCompraProductoIngreso" class="Controlador.IngresoController" method="ObtenerOrdenCompraProducto">
+            <result>/Vistas/Almacen/Auxiliar/ListaOrdenCompraProducto.jsp</result>
+        </action>
+        <action name="RecibirIngresoProducto" class="Controlador.IngresoController" method="RecibirIngresoProducto">
+            <result>/Vistas/Almacen/Auxiliar/ListaIngresoProducto.jsp</result>
+        </action>
+        <!--end Ingreso-->
+        
+        <!--begin Salida-->
+        <action name="LoadSalida" class="Controlador.SalidaController" method="Load">
+            <result name="Autorizado">/Vistas/Almacen/Salida.jsp</result>
+            <result name="NoAutorizado">/Vistas/Home/index.jsp</result>
+        </action>        
+        <action name="GrabarSalida" class="Controlador.SalidaController" method="GrabarSalida">
+            <result type="json"/>
+        </action>
+        <action name="EditarSalida" class="Controlador.SalidaController" method="EditarSalida">
+            <result type="json"/>
+        </action>
+        <action name="ObtenerSalida" class="Controlador.SalidaController" method="ObtenerSalida">
+            <result type="json"/>
+        </action>
+        <action name="EliminarSalida" class="Controlador.SalidaController" method="EliminarSalida">
+            <result type="json"/>
+        </action>
+        <action name="AgregarSalidaProducto" class="Controlador.SalidaController" method="AgregarSalidaProducto">
+            <result>/Vistas/Almacen/Auxiliar/ListaSalidaProducto.jsp</result>
+        </action>        
+        <action name="QuitarSalidaProducto" class="Controlador.SalidaController" method="QuitarSalidaProducto">
+            <result>/Vistas/Almacen/Auxiliar/ListaSalidaProducto.jsp</result>
+        </action>
+        <action name="BuscarSalida" class="Controlador.SalidaController" method="BuscarSalida">
+            <result>/Vistas/Almacen/Auxiliar/ListaSalida.jsp</result>
+        </action>
+        <!--end Salida-->
+        
+        <!--begin Estandar-->
+        <action name="LoadEstandar" class="Controlador.EstandarController" method="Load">
+            <result name="Autorizado">/Vistas/Produccion/Estandar.jsp</result>
+            <result name="NoAutorizado">/Vistas/Home/index.jsp</result>
+        </action>
+        <action name="GrabarEstandar" class="Controlador.EstandarController" method="GrabarEstandar">
+            <result type="json"/>
+        </action>
+        <action name="EditarEstandar" class="Controlador.EstandarController" method="EditarEstandar">
+            <result type="json"/>
+        </action>
+        <action name="ObtenerEstandar" class="Controlador.EstandarController" method="ObtenerEstandar">
+            <result type="json"/>
+        </action>
+        <action name="EliminarEstandar" class="Controlador.EstandarController" method="EliminarEstandar">
+            <result type="json"/>
+        </action>
+        <action name="AgregarEstandar" class="Controlador.EstandarController" method="AgregarEstandar">
+            <result>/Vistas/Produccion/Auxiliar/ListaEstandar.jsp</result>
+        </action>
+        <action name="QuitarEstandar" class="Controlador.EstandarController" method="QuitarEstandar">
+            <result>/Vistas/Produccion/Auxiliar/ListaEstandar.jsp</result>
+        </action>
+        <action name="BuscarEstandar" class="Controlador.EstandarController" method="BuscarEstandar">
+            <result>/Vistas/Produccion/Auxiliar/ListaEstandar.jsp</result>
+        </action>
+        <!--end Estandar-->
+        
+        <!--begin Empleado-->
+        <action name="LoadEmpleado" class="Controlador.EmpleadoController" method="Load">
+            <result name="Autorizado">/Vistas/Usuario/Empleado.jsp</result>
+            <result name="NoAutorizado">/Vistas/Home/index.jsp</result>
+        </action>
+        <action name="GrabarEmpleado" class="Controlador.EmpleadoController" method="GrabarEmpleado">
+            <result type="json"/>
+        </action>
+        <action name="EditarEmpleado" class="Controlador.EmpleadoController" method="EditarEmpleado">
+            <result type="json"/>
+        </action>
+        <action name="ObtenerEmpleado" class="Controlador.EmpleadoController" method="ObtenerEmpleado">
+            <result type="json"/>
+        </action>
+        <action name="EliminarEmpleado" class="Controlador.EmpleadoController" method="EliminarEmpleado">
+            <result type="json"/>
+        </action>
+        <action name="BuscarEmpleado" class="Controlador.EmpleadoController" method="BuscarEmpleado">
+            <result>/Vistas/Usuario/Auxiliar/ListaEmpleado.jsp</result>
+        </action>
+        <action name="BuscarEmpleadoJson" class="Controlador.EmpleadoController" method="BuscarEmpleado">
+            <result type="json"/>
+        </action>
+        <!--end Empleado-->
+        
+        <!--begin Pedido-->
+        <action name="LoadPedido" class="Controlador.PedidoController" method="Load">
+            <result name="Autorizado">/Vistas/Almacen/Pedido.jsp</result>
+            <result name="NoAutorizado">/Vistas/Home/index.jsp</result>
+        </action>
+        <action name="GrabarPedido" class="Controlador.PedidoController" method="GrabarPedido">
+            <result type="json"/>
+        </action>
+        <action name="EditarPedido" class="Controlador.PedidoController" method="EditarPedido">
+            <result type="json"/>
+        </action>
+        <action name="ObtenerPedido" class="Controlador.PedidoController" method="ObtenerPedido">
+            <result type="json"/>
+        </action>
+        <action name="EliminarPedido" class="Controlador.PedidoController" method="EliminarPedido">
+            <result type="json"/>
+        </action>
+        <action name="BuscarPedido" class="Controlador.PedidoController" method="BuscarPedido">
+            <result>/Vistas/Almacen/Auxiliar/ListaPedido.jsp</result>
+        </action>
+        <action name="BuscarPedidoJson" class="Controlador.PedidoController" method="BuscarPedido">
+            <result type="json"/>
+        </action>
+        <action name="AgregarPedidoProducto" class="Controlador.PedidoController" method="AgregarPedidoProducto">
+            <result>/Vistas/Almacen/Auxiliar/ListaPedidoProducto.jsp</result>
+        </action>
+        <action name="QuitarPedidoProducto" class="Controlador.PedidoController" method="QuitarPedidoProducto">
+            <result>/Vistas/Almacen/Auxiliar/ListaPedidoProducto.jsp</result>
+        </action>
+        <!--end Pedido-->        
+        <!--begin TipoCompra-->
+        <action name="GrabarTipoCompra" class="Controlador.TipoCompraController" method="GrabarTipoCompra">
+            <result type="json"/>
+        </action>
+        <action name="EditarTipoCompra" class="Controlador.TipoCompraController" method="EditarTipoCompra">
+            <result type="json"/>
+        </action>
+        <action name="ObtenerTipoCompra" class="Controlador.TipoCompraController" method="ObtenerTipoCompra">
+            <result type="json"/>
+        </action>
+        <action name="EliminarTipoCompra" class="Controlador.TipoCompraController" method="EliminarTipoCompra">
+            <result type="json"/>
+        </action>
+        <action name="BuscarTipoCompra" class="Controlador.TipoCompraController" method="BuscarTipoCompra">
+            <result>/Vistas/Contabilidad/Auxiliar/ListaTipoCompra.jsp</result>
+        </action>
+        <!--end TipoCompra-->
+        <!--begin TipoAdquisicion-->
+        <action name="GrabarTipoAdquisicion" class="Controlador.TipoAdquisicionController" method="GrabarTipoAdquisicion">
+            <result type="json"/>
+        </action>
+        <action name="EditarTipoAdquisicion" class="Controlador.TipoAdquisicionController" method="EditarTipoAdquisicion">
+            <result type="json"/>
+        </action>
+        <action name="ObtenerTipoAdquisicion" class="Controlador.TipoAdquisicionController" method="ObtenerTipoAdquisicion">
+            <result type="json"/>
+        </action>
+        <action name="EliminarTipoAdquisicion" class="Controlador.TipoAdquisicionController" method="EliminarTipoAdquisicion">
+            <result type="json"/>
+        </action>
+        <action name="BuscarTipoAdquisicion" class="Controlador.TipoAdquisicionController" method="BuscarTipoAdquisicion">
+            <result>/Vistas/Contabilidad/Auxiliar/ListaTipoAdquisicion.jsp</result>
+        </action>
+        <!--end TipoCompra-->
+        <!--begin IGV-->
+        <action name="GrabarIGV" class="Controlador.IGVController" method="GrabarIGV">
+            <result type="json"/>
+        </action>
+        <action name="EditarIGV" class="Controlador.IGVController" method="EditarIGV">
+            <result type="json"/>
+        </action>
+        <action name="ObtenerIGV" class="Controlador.IGVController" method="ObtenerIGV">
+            <result type="json"/>
+        </action>
+        <action name="BuscarIGV" class="Controlador.IGVController" method="BuscarIGV">
+            <result>/Vistas/Contabilidad/Auxiliar/ListaIGV.jsp</result>
+        </action>
+        <!--end IGV-->
+        <!--begin Percepcion-->
+        <action name="GrabarPercepcion" class="Controlador.PercepcionController" method="GrabarPercepcion">
+            <result type="json"/>
+        </action>
+        <action name="EditarPercepcion" class="Controlador.PercepcionController" method="EditarPercepcion">
+            <result type="json"/>
+        </action>
+        <action name="ObtenerPercepcion" class="Controlador.PercepcionController" method="ObtenerPercepcion">
+            <result type="json"/>
+        </action>
+        <action name="EliminarPercepcion" class="Controlador.PercepcionController" method="EliminarPercepcion">
+            <result type="json"/>
+        </action>
+        <action name="BuscarPercepcion" class="Controlador.PercepcionController" method="BuscarPercepcion">
+            <result>/Vistas/Contabilidad/Auxiliar/ListaPercepcion.jsp</result>
+        </action>
+        <!--end Percepcion-->
+        <!--begin Renta-->
+        <action name="GrabarRenta" class="Controlador.RentaController" method="GrabarRenta">
+            <result type="json"/>
+        </action>
+        <action name="EditarRenta" class="Controlador.RentaController" method="EditarRenta">
+            <result type="json"/>
+        </action>
+        <action name="ObtenerRenta" class="Controlador.RentaController" method="ObtenerRenta">
+            <result type="json"/>
+        </action>
+        <action name="EliminarRenta" class="Controlador.RentaController" method="EliminarRenta">
+            <result type="json"/>
+        </action>
+        <action name="BuscarRenta" class="Controlador.RentaController" method="BuscarRenta">
+            <result>/Vistas/Contabilidad/Auxiliar/ListaRenta.jsp</result>
+        </action>
+        <!--end Renta-->
+        <!--begin Aporte-->
+        <action name="GrabarAporte" class="Controlador.AporteController" method="GrabarAporte">
+            <result type="json"/>
+        </action>
+        <action name="EditarAporte" class="Controlador.AporteController" method="EditarAporte">
+            <result type="json"/>
+        </action>
+        <action name="ObtenerAporte" class="Controlador.AporteController" method="ObtenerAporte">
+            <result type="json"/>
+        </action>
+        <action name="EliminarAporte" class="Controlador.AporteController" method="EliminarAporte">
+            <result type="json"/>
+        </action>
+        <action name="BuscarAporte" class="Controlador.AporteController" method="BuscarAporte">
+            <result>/Vistas/Contabilidad/Auxiliar/ListaAporte.jsp</result>
+        </action>
+        <!--end Aporte-->
+        <!--begin Tasa-->
+        <action name="GrabarTasa" class="Controlador.TasaController" method="GrabarTasa">
+            <result type="json"/>
+        </action>
+        <action name="EditarTasa" class="Controlador.TasaController" method="EditarTasa">
+            <result type="json"/>
+        </action>
+        <action name="ObtenerTasa" class="Controlador.TasaController" method="ObtenerTasa">
+            <result type="json"/>
+        </action>
+        <action name="EliminarTasa" class="Controlador.TasaController" method="EliminarTasa">
+            <result type="json"/>
+        </action>
+        <action name="BuscarTasa" class="Controlador.TasaController" method="BuscarTasa">
+            <result>/Vistas/Contabilidad/Auxiliar/ListaTasa.jsp</result>
+        </action>
+        <!--end Tasa-->
+        <!--begin Provision-->
+        <action name="GrabarProvision" class="Controlador.ProvisionController" method="GrabarProvision">
+            <result type="json"/>
+        </action>
+        <action name="EditarProvision" class="Controlador.ProvisionController" method="EditarProvision">
+            <result type="json"/>
+        </action>
+        <action name="ObtenerProvision" class="Controlador.ProvisionController" method="ObtenerProvision">
+            <result type="json"/>
+        </action>
+        <action name="EliminarProvision" class="Controlador.ProvisionController" method="EliminarProvision">
+            <result type="json"/>
+        </action>
+        <action name="LoadProvision" class="Controlador.ProvisionController" method="Load">
+            <result name="Autorizado">/Vistas/Contabilidad/Provision.jsp</result>
+            <result name="NoAutorizado">/Vistas/Home/index.jsp</result>
+        </action>
+        <action name="BuscarProvision" class="Controlador.ProvisionController" method="BuscarProvision">
+            <result>/Vistas/Contabilidad/Auxiliar/ListaProvision.jsp</result>
+        </action>
+        <action name="AgregarDetalleProvision" class="Controlador.ProvisionController" method="AgregarDetalleProvision">
+            <result>/Vistas/Contabilidad/Auxiliar/ListaDetalleProvisionOC.jsp</result>
+        </action>
+        <action name="QuitarDetalleProvision" class="Controlador.ProvisionController" method="QuitarDetalleProvision">
+            <result>/Vistas/Contabilidad/Auxiliar/ListaDetalleProvision.jsp</result>
+        </action>
+        <action name="GenerarDetalleOC" class="Controlador.ProvisionController" method="GenerarDetalleOC">
+            <result>/Vistas/Contabilidad/Auxiliar/ListaDetalleProvisionOC.jsp</result>
+        </action>
+        <action name="EnviarDetalleOC" class="Controlador.ProvisionController" method="EnviarDetalleOC">
+            <result type="json"/>
+        </action>
+        <!--end Provision-->
+        <!--begin Periodo-->
+        <action name="GrabarPeriodo" class="Controlador.PeriodoController" method="GrabarPeriodo">
+            <result type="json"/>
+        </action>
+        <action name="EditarPeriodo" class="Controlador.PeriodoController" method="EditarPeriodo">
+            <result type="json"/>
+        </action>
+        <action name="ObtenerPeriodo" class="Controlador.PeriodoController" method="ObtenerPeriodo">
+            <result type="json"/>
+        </action>
+        <action name="EliminarPeriodo" class="Controlador.PeriodoController" method="EliminarPeriodo">
+            <result type="json"/>
+        </action>
+        <action name="BuscarPeriodo" class="Controlador.PeriodoController" method="BuscarPeriodo">
+            <result>/Vistas/Contabilidad/Auxiliar/ListaPeriodo.jsp</result>
+        </action>
+        <!--end Periodo-->
+        <!--begin Cuenta-->
+        <action name="GrabarCuenta" class="Controlador.CuentaController" method="GrabarCuenta">
+            <result type="json"/>
+        </action>
+        <action name="EditarCuenta" class="Controlador.CuentaController" method="EditarCuenta">
+            <result type="json"/>
+        </action>
+        <action name="ObtenerCuenta" class="Controlador.CuentaController" method="ObtenerCuenta">
+            <result type="json"/>
+        </action>
+        <action name="EliminarCuenta" class="Controlador.CuentaController" method="EliminarCuenta">
+            <result type="json"/>
+        </action>
+        <action name="BuscarCuenta" class="Controlador.CuentaController" method="BuscarCuenta">
+            <result>/Vistas/Contabilidad/Auxiliar/ListaCuenta.jsp</result>
+        </action>
+        <action name="BuscarCuentaJson" class="Controlador.CuentaController" method="BuscarCuenta">
+            <result type="json"/>
+        </action>
+        <action name="LoadCuenta" class="Controlador.CuentaController" method="Load">
+            <result>/Vistas/Contabilidad/Cuenta.jsp</result>
+        </action>
+        <!--end Cuenta-->
+        <!--begin Cuenta-->
+        <action name="LoadPuntoVenta" class="Controlador.PuntoVentaController" method="Load">
+            <result>/Vistas/Contabilidad/PuntoVenta.jsp</result>
+        </action>
+        <action name="GrabarPuntoVenta" class="Controlador.PuntoVentaController" method="GrabarPuntoVenta">
+            <result type="json"/>
+        </action>
+        <action name="EditarPuntoVenta" class="Controlador.PuntoVentaController" method="EditarPuntoVenta">
+            <result type="json"/>
+        </action>
+        <action name="ObtenerPuntoVenta" class="Controlador.PuntoVentaController" method="ObtenerPuntoVenta">
+            <result type="json"/>
+        </action>
+        <action name="EliminarPuntoVenta" class="Controlador.PuntoVentaController" method="EliminarPuntoVenta">
+            <result type="json"/>
+        </action>
+        <action name="BuscarPuntoVenta" class="Controlador.PuntoVentaController" method="BuscarPuntoVenta">
+            <result>/Vistas/Contabilidad/Auxiliar/ListaPuntoVenta.jsp</result>
+        </action>
+        <!--end PuntoVenta-->
+        <!--begin TipoVenta-->
+        <action name="LoadTipoVenta" class="Controlador.TipoVentaController" method="Load">
+            <result>/Vistas/Contabilidad/TipoVenta.jsp</result>
+        </action>
+        <action name="GrabarTipoVenta" class="Controlador.TipoVentaController" method="GrabarTipoVenta">
+            <result type="json"/>
+        </action>
+        <action name="EditarTipoVenta" class="Controlador.TipoVentaController" method="EditarTipoVenta">
+            <result type="json"/>
+        </action>
+        <action name="ObtenerTipoVenta" class="Controlador.TipoVentaController" method="ObtenerTipoVenta">
+            <result type="json"/>
+        </action>
+        <action name="EliminarTipoVenta" class="Controlador.TipoVentaController" method="EliminarTipoVenta">
+            <result type="json"/>
+        </action>
+        <action name="BuscarTipoVenta" class="Controlador.TipoVentaController" method="BuscarTipoVenta">
+            <result>/Vistas/Contabilidad/Auxiliar/ListaTipoVenta.jsp</result>
+        </action>
+        <!--end TipoVenta-->        
+        <!--begin Factura-->
+        <action name="LoadFactura" class="Controlador.FacturaController" method="Load">
+            <result name="Autorizado">/Vistas/Contabilidad/Factura.jsp</result>
+            <result name="NoAutorizado">/Vistas/Home/index.jsp</result>
+        </action>
+        <action name="GrabarFactura" class="Controlador.FacturaController" method="GrabarFactura">
+            <result type="json"/>
+        </action>
+        <action name="EditarFactura" class="Controlador.FacturaController" method="EditarFactura">
+            <result type="json"/>
+        </action>
+        <action name="ObtenerFactura" class="Controlador.FacturaController" method="ObtenerFactura">
+            <result type="json"/>
+        </action>
+        <action name="EliminarFactura" class="Controlador.FacturaController" method="EliminarFactura">
+            <result type="json"/>
+        </action>
+        <action name="BuscarFactura" class="Controlador.FacturaController" method="BuscarFactura">
+            <result>/Vistas/Contabilidad/Auxiliar/ListaFactura.jsp</result>
+        </action>
+        <action name="AgregarDetalleFactura" class="Controlador.FacturaController" method="AgregarDetalleFactura">
+            <result>/Vistas/Contabilidad/Auxiliar/ListaDetalleFactura.jsp</result>
+        </action>
+        <action name="QuitarDetalleFactura" class="Controlador.FacturaController" method="QuitarDetalleFactura">
+            <result>/Vistas/Contabilidad/Auxiliar/ListaDetalleFactura.jsp</result>
+        </action>
+        <!--end Factura-->
+        <!--begin TipoDocumento-->
+        <action name="LoadTipoDocumento" class="Controlador.TipoDocumentoController" method="Load">
+            <result>/Vistas/Contabilidad/TipoDocumento.jsp</result>
+        </action>
+        <action name="GrabarTipoDocumento" class="Controlador.TipoDocumentoController" method="GrabarTipoDocumento">
+            <result type="json"/>
+        </action>
+        <action name="EditarTipoDocumento" class="Controlador.TipoDocumentoController" method="EditarTipoDocumento">
+            <result type="json"/>
+        </action>
+        <action name="ObtenerTipoDocumento" class="Controlador.TipoDocumentoController" method="ObtenerTipoDocumento">
+            <result type="json"/>
+        </action>
+        <action name="EliminarTipoDocumento" class="Controlador.TipoDocumentoController" method="EliminarTipoDocumento">
+            <result type="json"/>
+        </action>
+        <action name="BuscarTipoDocumento" class="Controlador.TipoDocumentoController" method="BuscarTipoDocumento">
+            <result>/Vistas/Contabilidad/Auxiliar/ListaTipoDocumento.jsp</result>
+        </action>
+        <!--end TipoDocumento-->
+        <!--begim Servicio-->
+        <action name="LoadServicio" class="Controlador.ServicioController" method="Load">
+            <result>/Vistas/Contabilidad/Servicio.jsp</result>
+        </action>
+        <action name="GrabarServicio" class="Controlador.ServicioController" method="GrabarServicio">
+            <result type="json"/>
+        </action>
+        <action name="EditarServicio" class="Controlador.ServicioController" method="EditarServicio">
+            <result type="json"/>
+        </action>
+        <action name="ObtenerServicio" class="Controlador.ServicioController" method="ObtenerServicio">
+            <result type="json"/>
+        </action>
+        <action name="EliminarServicio" class="Controlador.ServicioController" method="EliminarServicio">
+            <result type="json"/>
+        </action>
+        <action name="BuscarServicio" class="Controlador.ServicioController" method="BuscarServicio">
+            <result>/Vistas/Contabilidad/Auxiliar/ListaServicio.jsp</result>
+        </action>
+        <!--end Servicio-->
+        <!--begin guia-->
+        <action name="LoadGuia" class="Controlador.GuiaController" method="Load">
+            <result name="Autorizado">/Vistas/Contabilidad/Guia.jsp</result>
+            <result name="NoAutorizado">/Vistas/Home/index.jsp</result>
+        </action>
+        <action name="GrabarGuia" class="Controlador.GuiaController" method="GrabarGuia">
+            <result type="json"/>
+        </action>
+        <action name="EditarGuia" class="Controlador.GuiaController" method="EditarGuia">
+            <result type="json"/>
+        </action>
+        <action name="ObtenerGuia" class="Controlador.GuiaController" method="ObtenerGuia">
+            <result type="json"/>
+        </action>
+        <action name="EliminarGuia" class="Controlador.GuiaController" method="EliminarGuia">
+            <result type="json"/>
+        </action>
+        <action name="AgregarDetalleGuia" class="Controlador.GuiaController" method="AgregarDetalleGuia">
+            <result>/Vistas/Contabilidad/Auxiliar/ListaDetalleGuia.jsp</result>
+        </action>
+        <action name="QuitarDetalleGuia" class="Controlador.GuiaController" method="QuitarDetalleGuia">
+            <result>/Vistas/Contabilidad/Auxiliar/ListaDetalleGuia.jsp</result>
+        </action>
+        <!--end guia-->
+        
+        <!--begin asiento-->
+        <action name="LoadAsiento" class="Controlador.AsientoController" method="Load">
+            <result name="Autorizado">/Vistas/Contabilidad/Asiento.jsp</result>
+            <result name="NoAutorizado">/Vistas/Home/index.jsp</result>
+        </action>
+        <action name="GrabarAsiento" class="Controlador.AsientoController" method="GrabarAsiento">
+            <result type="json"/>
+        </action>
+        <action name="BuscarAsiento" class="Controlador.AsientoController" method="BuscarAsiento">
+            <result>/Vistas/Contabilidad/Auxiliar/ListaAsiento.jsp</result>
+        </action>
+        <action name="AgregarDetalleAsiento" class="Controlador.AsientoController" method="AgregarDetalleAsiento">
+            <result>/Vistas/Contabilidad/Auxiliar/ListaDetalleAsiento.jsp</result>
+        </action>
+        <action name="QuitarDetalleAsiento" class="Controlador.AsientoController" method="QuitarDetalleAsiento">
+            <result>/Vistas/Contabilidad/Auxiliar/ListaDetalleAsiento.jsp</result>
+        </action>
+        <!--end asiento-->
+        
+        <!--begin subdiario-->
+        <action name="GrabarSubdiario" class="Controlador.SubdiarioController" method="GrabarSubdiario">
+            <result type="json"/>
+        </action>
+        <action name="LoadSubdiario" class="Controlador.SubdiarioController" method="Load">
+            <result name="Autorizado">/Vistas/Contabilidad/Subdiario.jsp</result>
+            <result name="NoAutorizado">/Vistas/Home/index.jsp</result>
+        </action>
+        <action name="BuscarSubdiario" class="Controlador.SubdiarioController" method="BuscarSubdiario">
+            <result>/Vistas/Contabilidad/Auxiliar/ListaSubdiario.jsp</result>
+        </action>
+        <action name="EliminarSubdiario" class="Controlador.SubdiarioController" method="EliminarSubdiario">
+            <result type="json"/>
+        </action>
+        <action name="EditarSubdiario" class="Controlador.SubdiarioController" method="EditarSubdiario">
+            <result type="json"/>
+        </action>
+        <!--end subdiario-->
+        
+        <!--begin tipo de cambio-->
+        <action name="LoadTipoCambio" class="Controlador.TipoCambioController" method="Load">
+            <result name="Autorizado">/Vistas/Ventas/TipoCambio.jsp</result>
+            <result name="NoAutorizado">/Vistas/Home/index.jsp</result>
+        </action>
+        <action name="GrabarTipoCambio" class="Controlador.TipoCambioController" method="GrabarTipoCambio">
+            <result type="json"/>
+        </action>
+        <action name="BuscarTipoCambio" class="Controlador.TipoCambioController" method="BuscarTipoCambio">
+            <result>/Vistas/Ventas/Auxiliar/ListaTipoCambio.jsp</result>
+        </action>
+        <action name="EliminarTipoCambio" class="Controlador.TipoCambioController" method="EliminarTipoCambio">
+            <result type="json"/>
+        </action>
+        <action name="EditarTipoCambio" class="Controlador.TipoCambioController" method="EditarTipoCambio">
+            <result type="json"/>
+        </action>
+        <!--end tipo de cambio-->
+        
+        <!--begin clase-->
+        <action name="GrabarClase" class="Controlador.ClaseController" method="GrabarClase">
+            <result type="json"/>
+        </action>
+        <action name="LoadClase" class="Controlador.ClaseController" method="Load">
+            <result name="Autorizado">/Vistas/Contabilidad2/Clase.jsp</result>
+            <result name="NoAutorizado">/Vistas/Home/index.jsp</result>
+        </action>
+        <action name="BuscarClase" class="Controlador.ClaseController" method="BuscarClase">
+            <result>/Vistas/Contabilidad2/Auxiliar/ListaClase.jsp</result>
+        </action>
+        <action name="BuscarClaseJson" class="Controlador.ClaseController" method="BuscarClase">
+            <result type="json"/>
+        </action>
+        <action name="EliminarClase" class="Controlador.ClaseController" method="EliminarClase">
+            <result type="json"/>
+        </action>
+        <action name="EditarClase" class="Controlador.ClaseController" method="EditarClase">
+            <result type="json"/>
+        </action>
+        <!--end clase-->
+        
+        <!--begin naturaleza-->
+        <action name="GrabarNaturaleza" class="Controlador.NaturalezaController" method="GrabarNaturaleza">
+            <result type="json"/>
+        </action>
+        <action name="LoadNaturaleza" class="Controlador.NaturalezaController" method="Load">
+            <result name="Autorizado">/Vistas/Contabilidad2/Naturaleza.jsp</result>
+            <result name="NoAutorizado">/Vistas/Home/index.jsp</result>
+        </action>
+        <action name="BuscarNaturaleza" class="Controlador.NaturalezaController" method="BuscarNaturaleza">
+            <result>/Vistas/Contabilidad2/Auxiliar/ListaNaturaleza.jsp</result>
+        </action>
+        <action name="EliminarNaturaleza" class="Controlador.NaturalezaController" method="EliminarNaturaleza">
+            <result type="json"/>
+        </action>
+        <action name="EditarNaturaleza" class="Controlador.NaturalezaController" method="EditarNaturaleza">
+            <result type="json"/>
+        </action>
+        <!--end naturaleza-->
+        
+        <!--begin tipoauxiliar-->
+        <action name="GrabarTipoAuxiliar" class="Controlador.TipoAuxiliarController" method="GrabarTipoAuxiliar">
+            <result type="json"/>
+        </action>
+        <action name="LoadTipoAuxiliar" class="Controlador.TipoAuxiliarController" method="Load">
+            <result name="Autorizado">/Vistas/Contabilidad2/TipoAuxiliar.jsp</result>
+            <result name="NoAutorizado">/Vistas/Home/index.jsp</result>
+        </action>
+        <action name="BuscarTipoAuxiliar" class="Controlador.TipoAuxiliarController" method="BuscarTipoAuxiliar">
+            <result>/Vistas/Contabilidad2/Auxiliar/ListaTipoAuxiliar.jsp</result>
+        </action>
+        <action name="EliminarTipoAuxiliar" class="Controlador.TipoAuxiliarController" method="EliminarTipoAuxiliar">
+            <result type="json"/>
+        </action>
+        <action name="EditarTipoAuxiliar" class="Controlador.TipoAuxiliarController" method="EditarTipoAuxiliar">
+            <result type="json"/>
+        </action>
+        <!--end tipoauxiliar-->
+        
+        <!--begin ajuste-->
+        <action name="GrabarAjuste" class="Controlador.AjusteController" method="GrabarAjuste">
+            <result type="json"/>
+        </action>
+        <action name="LoadAjuste" class="Controlador.AjusteController" method="Load">
+            <result name="Autorizado">/Vistas/Contabilidad2/Ajuste.jsp</result>
+            <result name="NoAutorizado">/Vistas/Home/index.jsp</result>
+        </action>
+        <action name="BuscarAjuste" class="Controlador.AjusteController" method="BuscarAjuste">
+            <result>/Vistas/Contabilidad2/Auxiliar/ListaAjuste.jsp</result>
+        </action>
+        <action name="EliminarAjuste" class="Controlador.AjusteController" method="EliminarAjuste">
+            <result type="json"/>
+        </action>
+        <action name="EditarAjuste" class="Controlador.AjusteController" method="EditarAjuste">
+            <result type="json"/>
+        </action>
+        <!--end ajuste-->
+        
+        <!--begin tipocambiocuenta-->
+        <action name="GrabarTipoCambioCuenta" class="Controlador.TipoCambioCuentaController" method="GrabarTipoCambioCuenta">
+            <result type="json"/>
+        </action>
+        <action name="LoadTipoCambioCuenta" class="Controlador.TipoCambioCuentaController" method="Load">
+            <result name="Autorizado">/Vistas/Contabilidad2/TipoCambioCuenta.jsp</result>
+            <result name="NoAutorizado">/Vistas/Home/index.jsp</result>
+        </action>
+        <action name="BuscarTipoCambioCuenta" class="Controlador.TipoCambioCuentaController" method="BuscarTipoCambioCuenta">
+            <result>/Vistas/Contabilidad2/Auxiliar/ListaTipoCambioCuenta.jsp</result>
+        </action>
+        <action name="EliminarTipoCambioCuenta" class="Controlador.TipoCambioCuentaController" method="EliminarTipoCambioCuenta">
+            <result type="json"/>
+        </action>
+        <action name="EditarTipoCambioCuenta" class="Controlador.TipoCambioCuentaController" method="EditarTipoCambioCuenta">
+            <result type="json"/>
+        </action>
+        <!--end tipocambiocuenta-->
+        
+        <!--begin configuracioncuenta-->
+        <action name="GrabarConfiguracionCuenta" class="Controlador.ConfiguracionCuentaController" method="GrabarConfiguracionCuenta">
+            <result type="json"/>
+        </action>
+        <action name="LoadConfiguracionCuenta" class="Controlador.ConfiguracionCuentaController" method="Load">
+            <result name="Autorizado">/Vistas/Contabilidad2/ConfiguracionCuenta.jsp</result>
+            <result name="NoAutorizado">/Vistas/Home/index.jsp</result>
+        </action>
+        <action name="BuscarConfiguracionCuenta" class="Controlador.ConfiguracionCuentaController" method="BuscarConfiguracionCuenta">
+            <result>/Vistas/Contabilidad2/Auxiliar/ListaConfiguracionCuenta.jsp</result>
+        </action>
+        <action name="EliminarConfiguracionCuenta" class="Controlador.ConfiguracionCuentaController" method="EliminarConfiguracionCuenta">
+            <result type="json"/>
+        </action>
+        <action name="EditarConfiguracionCuenta" class="Controlador.ConfiguracionCuentaController" method="EditarConfiguracionCuenta">
+            <result type="json"/>
+        </action>
+        <!--end configuracioncuenta-->
+        <!--begin configuracionalmacen-->
+        <action name="GrabarConfiguracionAlmacen" class="Controlador.ConfiguracionAlmacenController" method="GrabarConfiguracionAlmacen">
+            <result type="json"/>
+        </action>
+        <action name="LoadConfiguracionAlmacen" class="Controlador.ConfiguracionAlmacenController" method="Load">
+            <result name="Autorizado">/Vistas/Contabilidad2/ConfiguracionAlmacen.jsp</result>
+            <result name="NoAutorizado">/Vistas/Home/index.jsp</result>
+        </action>
+        <action name="BuscarConfiguracionAlmacen" class="Controlador.ConfiguracionAlmacenController" method="BuscarConfiguracionAlmacen">
+            <result>/Vistas/Contabilidad2/Auxiliar/ListaConfiguracionAlmacen.jsp</result>
+        </action>
+        <action name="EliminarConfiguracionAlmacen" class="Controlador.ConfiguracionAlmacenController" method="EliminarConfiguracionAlmacen">
+            <result type="json"/>
+        </action>
+        <action name="EditarConfiguracionAlmacen" class="Controlador.ConfiguracionAlmacenController" method="EditarConfiguracionAlmacen">
+            <result type="json"/>
+        </action>
+        <action name="AgregarDetalleConfiguracionAlmacen" class="Controlador.ConfiguracionAlmacenController" method="AgregarDetalleConfiguracionAlmacen">
+            <result>/Vistas/Contabilidad2/Auxiliar/ListaDetalleConfiguracionAlmacen.jsp</result>
+        </action>
+        <action name="QuitarDetalleConfiguracionAlmacen" class="Controlador.ConfiguracionAlmacenController" method="QuitarDetalleConfiguracionAlmacen">
+            <result>/Vistas/Contabilidad2/Auxiliar/ListaDetalleConfiguracionAlmacen.jsp</result>
+        </action>
+        <!--end configuracionalmacen-->
+        
+        <!--begin actividad-->
+        <action name="GrabarActividad" class="Controlador.ActividadController" method="GrabarActividad">
+            <result type="json"/>
+        </action>
+        <action name="LoadActividad" class="Controlador.ActividadController" method="Load">
+            <result name="Autorizado">/Vistas/Contabilidad2/Actividad.jsp</result>
+            <result name="NoAutorizado">/Vistas/Home/index.jsp</result>
+        </action>
+        <action name="BuscarActividad" class="Controlador.ActividadController" method="BuscarActividad">
+            <result>/Vistas/Contabilidad2/Auxiliar/ListaActividad.jsp</result>
+        </action>
+        <action name="EliminarActividad" class="Controlador.ActividadController" method="EliminarActividad">
+            <result type="json"/>
+        </action>
+        <action name="EditarActividad" class="Controlador.ActividadController" method="EditarActividad">
+            <result type="json"/>
+        </action>
+        <!--end actividad-->
+        
+         <!--begin tareo-->
+        <action name="GrabarTareo" class="Controlador.TareoController" method="GrabarTareo">
+            <result type="json"/>
+        </action>
+        <action name="LoadTareo" class="Controlador.TareoController" method="Load">
+            <result name="Autorizado">/Vistas/Contabilidad2/Tareo.jsp</result>
+            <result name="NoAutorizado">/Vistas/Home/index.jsp</result>
+        </action>
+        <action name="BuscarTareo" class="Controlador.TareoController" method="BuscarTareo">
+            <result>/Vistas/Contabilidad2/Auxiliar/ListaTareo.jsp</result>
+        </action>
+        <action name="EliminarTareo" class="Controlador.TareoController" method="EliminarTareo">
+            <result type="json"/>
+        </action>
+        <action name="EditarTareo" class="Controlador.TareoController" method="EditarTareo">
+            <result type="json"/>
+        </action>
+        <action name="AgregarDetalleTareo" class="Controlador.TareoController" method="AgregarDetalleTareo">
+            <result>/Vistas/Contabilidad2/Auxiliar/ListaDetalleTareo.jsp</result>
+        </action>
+        <action name="QuitarDetalleTareo" class="Controlador.TareoController" method="QuitarDetalleTareo">
+            <result>/Vistas/Contabilidad2/Auxiliar/ListaDetalleTareo.jsp</result>
+        </action>
+        <!--end tareo-->
+
+        <!--begin configuracion-->
+        <action name="GrabarConfiguracion" class="Controlador.ConfiguracionController" method="GrabarConfiguracion">
+            <result type="json"/>
+        </action>
+        <action name="LoadConfiguracion" class="Controlador.ConfiguracionController" method="Load">
+            <result name="Autorizado">/Vistas/Contabilidad2/Configuracion.jsp</result>
+            <result name="NoAutorizado">/Vistas/Home/index.jsp</result>
+        </action>
+        <action name="BuscarConfiguracion" class="Controlador.ConfiguracionController" method="BuscarConfiguracion">
+            <result>/Vistas/Contabilidad2/Auxiliar/ListaConfiguracion.jsp</result>
+        </action>
+        <action name="EliminarConfiguracion" class="Controlador.ConfiguracionController" method="EliminarConfiguracion">
+            <result type="json"/>
+        </action>
+        <action name="EditarConfiguracion" class="Controlador.ConfiguracionController" method="EditarConfiguracion">
+            <result type="json"/>
+        </action>
+        <action name="AgregarDetalleConfiguracionCargo" class="Controlador.ConfiguracionController" method="AgregarDetalleConfiguracionCargo">
+            <result>/Vistas/Contabilidad2/Auxiliar/ListaDetalleConfiguracionCargo.jsp</result>
+        </action>
+        <action name="QuitarDetalleConfiguracionCargo" class="Controlador.ConfiguracionController" method="QuitarDetalleConfiguracionCargo">
+            <result>/Vistas/Contabilidad2/Auxiliar/ListaDetalleConfiguracionCargo.jsp</result>
+        </action>
+        <action name="AgregarDetalleConfiguracionAbono" class="Controlador.ConfiguracionController" method="AgregarDetalleConfiguracionAbono">
+            <result>/Vistas/Contabilidad2/Auxiliar/ListaDetalleConfiguracionAbono.jsp</result>
+        </action>
+        <action name="QuitarDetalleConfiguracionAbono" class="Controlador.ConfiguracionController" method="QuitarDetalleConfiguracionAbono">
+            <result>/Vistas/Contabilidad2/Auxiliar/ListaDetalleConfiguracionAbono.jsp</result>
+        </action>
+        <!--end configuracion-->
+                        
+    </package>
+</struts>

@@ -1,0 +1,48 @@
+
+form label{
+    /*
+    display: inline;
+    width:170px;
+    float:left;
+    margin:8px 0 2px 0;
+    padding:0;
+    */
+      display: block;
+  margin: .5em 0 0 0;
+}
+
+form label.margin{
+    margin-left:10px;
+}
+
+form input[type="text"], form input[type="password"]{
+    min-width: 190px;
+}
+
+form select{
+    min-width: 195px;
+}
+
+form textArea{
+    min-width: 190px;
+}
+
+.box {
+    
+    border:1px solid #666666;
+}
+.box h3 {background:#666666;color:white;margin:0;}
+
+.box div{
+    padding: 10px 10px 0px 10px;
+}
+
+fieldset{
+    
+    
+}
+
+.btn {
+   display: block;
+   margin: 1em 0;
+}

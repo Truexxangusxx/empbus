@@ -1,0 +1,137 @@
+
+@import url(navi.css);
+@import url(forms.css);
+@import url(tables.css);
+
+body{
+	margin:0;
+	padding:0;
+	font-size:13px;
+	font-family:verdana, Arial, Helvetica, sans-serif;
+	color:#FFFFFF;
+	background-color:#4F473A;
+	}
+
+img{border:0; padding:0; margin:0;}
+.justify{text-align:justify;}
+.bold{font-weight:bold;}
+.center{text-align:center;}
+.right{text-align:right;}
+.nostart {list-style-type:none; margin:0; padding:0;}
+.clear{clear:both;}
+br.clear{clear:both; margin-top:-15px;}
+a{outline:none; text-decoration:none;}
+
+.fl_left{float:left;}
+.fl_right{float:right;}
+
+.imgl, .imgr{border:1px solid #CCCCCC; padding:5px; color:#666666; background-color:#F7F7F7;}
+.imgl{float:left; margin:0 8px 8px 0; clear:left;}
+.imgr{float:right; margin:0 0 8px 8px; clear:right;}
+
+/* ----------------------------------------------Wrapper-------------------------------------*/
+
+
+.col1{color:#FFFFFF; background-color:#294E79;}
+.col2{color:#666666; background-color:#F5F5F5; min-height: 590px; padding: 10px 10px 10px 10px;}
+.col2 a{color:#294E79; background-color:#F5F5F5;}
+.col3, .col4{color:#666666; background-color:#FFFFFF;}
+.col5{color:#FFFFFF; background-color:#1C3451;}
+
+/* ----------------------------------------------Generalise-------------------------------------*/
+
+#head, #gallery, #breadcrumb, #container, #footer{
+	position:relative;
+	margin:0 auto 0;
+	display:block;
+	width:100%;
+	}
+
+/* ----------------------------------------------Head-------------------------------------*/
+
+#head{
+	height: 110px;
+	/*z-index:1000;*/
+	color:#FFFFFF; 
+        background-color:#294E79;
+	}
+
+#head h1, #head p, #head ul, #head a{
+	margin:0;
+	padding:0;
+	list-style:none;
+	line-height:normal;
+        padding-left: 10px;
+        padding-right: 10px;
+	}
+
+#head h1 a{
+	position:absolute;
+	top:20px;
+	left:0;
+	font-size:38px;
+	font-weight:normal;
+	color:#FFFFFF;
+	background-color:#294E79;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	}
+
+#head p{
+	display:block;
+	position:absolute;
+	top:65px;
+	left:0;
+	color:#F5F5F5;
+	background-color:#294E79;
+	font-size:16px;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	}
+
+
+/* ----------------------------------------------Footer-------------------------------------*/
+
+#footer{
+	padding:20px 0;
+	color:#FFFFFF; background-color:#1C3451;
+	}
+
+#footer a{
+	color:#98B7DC;
+	background-color:#1C3451;
+	}
+
+#footer h2{
+	margin:0 0 15px 0;
+	padding:0 0 8px 0;
+	font-size:22px;
+	font-weight:normal;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	color:#CCCCCC;
+	background-color:#1C3451;
+	line-height:normal;
+	border-bottom:1px dashed #CCCCCC;
+	}
+
+#contactform{
+	display:block;
+	float:left;
+	width:350px;
+	}
+
+
+/* ------Copyright------*/
+
+#copyright{
+	display:block;
+	float:left;
+	width:100%;
+	margin:25px 0 0 0;
+	padding:20px 0 0 0;
+	font-size:12px;
+	border-top:1px dashed #666666;
+	}
+
+#copyright p{
+	margin:0;
+	padding:0;
+	}
