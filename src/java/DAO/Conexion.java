@@ -10,7 +10,7 @@ public class Conexion {
 
         String usuario = "root";
         String clave = "123456";
-        String url = "jdbc:mysql://127.0.0.1/empbus";
+        String url = "jdbc:mysql://localhost:3306/empbus";
 
         Class.forName("com.mysql.jdbc.Driver");
         con = DriverManager.getConnection(url, usuario, clave);
